@@ -103,7 +103,7 @@ public class AnnouncementsArchiver implements Archiveable {
 		final Element table = doc.select("table").first();
 		final Element lastRow = table.select("tr").last();
 		lastRow.appendElement("tr");
-		lastRow.append("<td>Attachments</td><td><ul></ul></td>");
+		lastRow.append("<td>Attachments</td><td><ul style=\"list-style: none; padding-left:0;\"></ul></td>");
 		final Elements attachmentsList = doc.select("ul");
 		attachmentsList.append(this.attachmentHyperlinksList);
 
